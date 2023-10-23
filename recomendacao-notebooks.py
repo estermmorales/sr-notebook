@@ -74,20 +74,16 @@ def calcular_pontuacao_percentual(notebook, respostas_usuario, pesos):
 print("Bem-vindo ao sistema de recomendação de notebooks!")
 respostas_usuario = {}
 respostas_usuario["preco"] = float(input("Qual é o seu orçamento máximo? "))
-placa_de_video = input(
+respostas_usuario["placa_de_video"] = input(
     "Você precisa de uma placa de vídeo dedicada? (Sim ou Não): ")
-tamanho = input(
+respostas_usuario["tamanho"] = input(
     "Qual tamanho de tela você prefere? (compacto, médio ou grande): ")
-respostas_usuario["tamanho"] = tamanho
-marca = input(
+respostas_usuario["marca"] = input(
     "Tem preferência por uma marca específica? (Digite o nome da marca ou 'Sem preferência'): ")
-respostas_usuario["marca"] = marca
 respostas_usuario["capacidade_disco"] = int(
     input("De quanto espaço de armazenamento você precisa (em GB)? "))
-usos = input(
-    "Para que você pretende usar o notebook? (edição de vídeo, edição de foto, edição de arquivo de áudio, jogos ou nenhuma das opções): ")
-if usos.lower() != "nenhuma das opções":
-    respostas_usuario["uso"] = usos.split(", ")
+respostas_usuario["uso"] = input(
+    "O notebook vai ser usado para jogos, edição de vídeos, fotos, ou arquivos de áudio? (Sim ou Não): ")
 
 # Calcula a pontuação percentual para cada notebook
 notebooks_classificados = []
