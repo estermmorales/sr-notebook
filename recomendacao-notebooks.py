@@ -12,9 +12,8 @@ pesos = {
     "uso": 0.1
 }
 
+
 # Função para calcular a pontuação percentual de um notebook com base nas respostas do usuário
-
-
 def calcular_pontuacao_percentual(notebook, respostas_usuario, pesos):
     pontuacao_total = 0
     peso_total = 0
